@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-mvc",
+  "version": "1.0.0",
+  "description": "nodejs mvb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js",
+    "knex": "babel-node node_modules/.bin/knex --knexfile knexfile.js --env knexDB",
+    "make:migration": "yarn knex migrate:make",
+    "migrate": "yarn knex migrate:latest",
+    "migrate:rollback": "yarn knex migrate:rollback"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "knex": "^0.19.4",
+    "method-override": "^3.0.0",
+    "objection": "^1.6.11",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "nodemon": "^1.19.3"
+  }
+}
